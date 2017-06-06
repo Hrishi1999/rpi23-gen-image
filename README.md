@@ -1,6 +1,7 @@
 # rpi23-gen-image
 ## Introduction
 `rpi23-gen-image.sh` is an advanced Debian Linux bootstrapping shell script for generating Debian OS images for Raspberry Pi 2 (RPi2) and Raspberry Pi 3 (RPi3) computers. The script at this time supports the bootstrapping of the Debian (armhf) releases `jessie` and `stretch`. Raspberry Pi 3 images are currently generated for 32-bit mode only.
+
 Note : The default setup here is for RPI3 with SUCROSE window manager. 
 
 ## Build dependencies
