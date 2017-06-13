@@ -125,7 +125,7 @@ ENABLE_SOUND=${ENABLE_SOUND:=true}
 ENABLE_DBUS=${ENABLE_DBUS:=true}
 ENABLE_HWRANDOM=${ENABLE_HWRANDOM:=true}
 ENABLE_MINGPU=${ENABLE_MINGPU:=false}
-ENABLE_XORG=${ENABLE_XORG:=false}
+ENABLE_XORG=${ENABLE_XORG:=true}
 ENABLE_WM=${ENABLE_WM:="sucrose"}
 ENABLE_RSYSLOG=${ENABLE_RSYSLOG:=true}
 ENABLE_USER=${ENABLE_USER:=true}
@@ -352,7 +352,8 @@ fi
 
 # Don't clobber an old build
 if [ -e "$BUILDDIR" ] ; then
-  echo "error: directory ${BUILDDIR} already exists, not proceeding"
+  rm -rf $BUILDDIR
+  echo "Deleted ${BUILDDIR} Start script again to move on!"
   exit 1
 fi
 
@@ -387,7 +388,7 @@ fi
 
 # Add dbus package, recommended if using systemd
 if [ "$ENABLE_DBUS" = true ] ; then
-  APT_INCLUDES="${APT_INCLUDES},dbus"
+  APT_INCLUDES="${APT_INCLUDES},dbus,default-dbus-session-bus,dbus-user-session"
 fi
 
 # Add iptables IPv4/IPv6 package
