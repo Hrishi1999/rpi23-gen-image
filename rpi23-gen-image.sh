@@ -388,7 +388,7 @@ fi
 
 # Add dbus package, recommended if using systemd
 if [ "$ENABLE_DBUS" = true ] ; then
-  APT_INCLUDES="${APT_INCLUDES},dbus,default-dbus-session-bus,dbus-user-session"
+  APT_INCLUDES="${APT_INCLUDES},dbus,dbus-x11"
 fi
 
 # Add iptables IPv4/IPv6 package
