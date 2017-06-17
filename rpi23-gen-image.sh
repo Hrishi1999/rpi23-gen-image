@@ -126,8 +126,8 @@ ENABLE_DBUS=${ENABLE_DBUS:=true}
 ENABLE_HWRANDOM=${ENABLE_HWRANDOM:=true}
 ENABLE_MINGPU=${ENABLE_MINGPU:=false}
 ENABLE_XORG=${ENABLE_XORG:=true}
-ENABLE_DM=${ENABLE_DM:="lightdm"}
 ENABLE_WM=${ENABLE_WM:="sucrose"}
+ENABLE_DM=${ENABLE_DM:="lightdm"}
 ENABLE_RSYSLOG=${ENABLE_RSYSLOG:=true}
 ENABLE_USER=${ENABLE_USER:=true}
 USER_NAME=${USER_NAME:="pi"}
@@ -421,7 +421,7 @@ fi
 # Add user defined window manager package
 if [ -n "$ENABLE_WM" ] ; then
   APT_INCLUDES="${APT_INCLUDES},${ENABLE_WM},${ENABLE_DM}"
-
+  
   # Enable xorg package dependencies
   ENABLE_XORG=true
 fi
