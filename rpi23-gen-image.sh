@@ -420,7 +420,7 @@ fi
 
 # Add user defined window manager package
 if [ -n "$ENABLE_WM" ] ; then
-  APT_INCLUDES="${APT_INCLUDES},${ENABLE_WM},${ENABLE_DM}"
+  APT_INCLUDES="${APT_INCLUDES},${ENABLE_WM},${ENABLE_DM},telepathy-mission-control-5,unzip"
   
   # Enable xorg package dependencies
   ENABLE_XORG=true
